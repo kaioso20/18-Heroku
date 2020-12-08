@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npm i -g pm2",
     "test": "mocha src/tests/*.js",
     "test:prod": "cross-env NODE_ENV=prod npm t",
     "test:dev": "cross-env NODE_ENV=dev npm t",
     "test:watch": "mocha src/tests/*.js -w",
-    "prod": "cross-env NODE_ENV=prod node api.js"
+    "prod": "cross-env NODE_ENV=prod pm2-runtime api.js"
   },
   "author": "erickwendel",
   "license": "ISC",
