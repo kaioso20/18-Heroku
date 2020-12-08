@@ -7,16 +7,17 @@ const UserSchema = require('./../db/strategies/postgresdb/schemas/usuarioSchema'
 let app = {}
 
 const USER = {
-    username: 'ymir',
-    password: '123456'
+    username: 'ovylqknvxjfloj',
+    password: '17c4428e3410ad4b3ed2bf78e2dd72e6c056bf2c3c1e448f1bac1bcc8445b459'
 }
 
 const USER_DB = {
     username: USER.username.toLocaleLowerCase(),
-    password: '$2b$04$vrcwZAv4/2ldWaPGo8VOPe.ZZQOM3W7ywZhbcr6Q1kpCWdaBCG0xW'
+    password: '$2a$04$xx9PJikHavBkX/p5IQlzw.KhAhMDj5igLIQa8EFiVY7pJjd.1hueG'
 }
 
 describe('Authorization JWT', function () {
+    this.timeout(Infinity)
     this.beforeAll(async () => {
         app = await api
         const connectionPostgres = await Postgres.connect()

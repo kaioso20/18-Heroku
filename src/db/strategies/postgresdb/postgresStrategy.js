@@ -18,15 +18,28 @@ class PostgresStrategy extends IDb {
   static async defineModule(connection, schema) {
     return await connection.define(schema.name, schema.schema, schema.options).sync()
   }
-  static connect() {
-    const connection = new Sequelize(
-      process.env.CONNECTION_STRING_POSTGRES, {
-      operatorsAliases: false,
-      logging: false,
+  static async connect() {
+    const SSL_DB = process.env.SSL_DB === 'true' ? true : undefined
+    const SSL_DB_REJECT = process.env.SSL_DB_REJECT === 'false' ? false : undefined
+
+    let dialectOptions = {}
+    if (SSL_DB) {
+      dialectOptions = {
+        ssl: {
+          require: SSL_DB,
+          rejectUnauthorized: SSL_DB_REJECT,
+        }
+      };
+    };
+
+    const connection = await new Sequelize(process.env.CONNECTION_STRING_POSTGRES, {
+      ssl: true,
       quoteIdentifiers: false,
-      ssl: process.env.SSL_DB
-    })
-    return connection
+      logging: false,
+      dialectOptions,
+    });
+
+    return connection;
   }
   async create(item) {
     const { dataValues } = await this._schema.create(item)

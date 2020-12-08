@@ -3,7 +3,7 @@ const api = require('../../api')
 
 let app = {}
 
-const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InltaXIiLCJpZCI6MSwiaWF0IjoxNjA3MzY5OTcyfQ.c8sNVWSMFQQ4MCthjL-DuZg_1nPpKV7Bh8pr1mh8j48'
+const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im92eWxxa252eGpmbG9qIiwiaWQiOjQyLCJpYXQiOjE2MDc0NTM4OTR9.yckQSKdQ80wmtmoxGgHWl4uud1HweWGovGCwNtWSs9s'
 
 const headers = {
     Authorization: TOKEN

@@ -30,7 +30,6 @@ class MongoDBStrategy extends IDb {
         useUnifiedTopology: true
       }, (error) => {
         if (!error) return;
-        console.log('Falha na conexão', error)
       })
     const connection = Mongoose.connection
     return connection;
