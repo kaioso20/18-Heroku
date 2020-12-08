@@ -25,6 +25,27 @@ npm run test:dev
 
 Ao finalizaro processo, executar os códigos no terminal ```git bash``` para executar as devidas bibliotecas no docker
 
+## Dependências
+- @hapi/hapi > ^19.2.0
+- @hapi/inert > ^6.0.3
+- @hapi/joi > ^17.1.1
+- @hapi/jwt > ^2.0.1
+- @hapi/vision > ^6.0.1
+- bcrypt > ^5.0.0
+- boom > ^7.3.0
+- cross-env > ^7.0.3
+- dotenv > ^8.2.0
+- hapi-auth-jwt2 > ^10.2.0
+- hapi-swagger > ^13.0.2
+- inert > ^5.1.3
+- joi > ^17.3.0
+- jsonwebtoken > ^8.5.1
+- mongoose > ^5.11.1
+- pg > ^8.5.1
+- pg-hstore > ^2.3.3
+- sequelize > ^6.3.5
+- vision > ^5.4.4
+
 ## Autor
 - [Caio Rafael](https://github.com/kaioso20).
 
