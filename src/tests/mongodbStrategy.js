@@ -39,17 +39,10 @@ describe('Mongo_DB Strategy', function () {
         assert.deepStrictEqual({ nome, poder }, SUPER_MOCK);
     })
     it('MongoDB Update', async () => {
-        const [{_id}] = await context.read({ nome: SUPER_MOCK_Atualizar.nome });
-        const validador = await context.update(_id, { nome: 'PernaLonga' });
+        const [{_id}] = await context.read({ nome: SUPER_MOCK.nome });
+        const validador = await context.update(_id, { nome: SUPER_MOCK_Atualizar.nome });
         assert.deepStrictEqual(validador.nModified, 1);
     })
-    it('MongoDB Delete', async () => {
-        const [{_id}] = await context.read({ nome: SUPER_MOCK.nome });
-        const deleted = await context.delete(_id);
-
-        assert.deepStrictEqual(deleted.n, 1);
-    })
-    
     it('MongoDB Delete All', async () => {
         const deleted = await context.delete();
         assert.deepStrictEqual(deleted.ok, 1);

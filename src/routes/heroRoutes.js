@@ -85,7 +85,7 @@ class heroHoutes extends BaseRoutes {
                     const dados = JSON.parse(dadosString)
                     return await this._db.update(id, dados)
                 } catch (error) {
-                    return Boom.internal(erro)
+                    return Boom.internal(error)
                 }
             },
             config: {
