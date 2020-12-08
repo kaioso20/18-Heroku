@@ -45,7 +45,7 @@ Ao finalizaro processo, executar os códigos no terminal ```git bash``` para exe
 - pg-hstore > ^2.3.3
 - sequelize > ^6.3.5
 - vision > ^5.4.4
-
+ 
 ## Autor
 - [Caio Rafael](https://github.com/kaioso20).
 
