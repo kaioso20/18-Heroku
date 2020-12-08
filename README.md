@@ -23,7 +23,7 @@ feito isso, habilitar o uso do terminal para execução de um teste na versão l
 npm run test:dev
 ```
 
-Ao finalizaro processo, executar os códigos no terminal ```git bash``` para executar as devidas bibliotecas no docker
+Ao finalizaro processo, executar os códigos no terminal ```git bash``` para executar as devidas bibliotecas no docker (final do documento)
 
 ## Dependências
 - @hapi/hapi > ^19.2.0
