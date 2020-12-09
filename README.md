@@ -17,45 +17,32 @@ Após entrar no código, executar o código abaixo para instalar as dependência
 npm install
 ```
 
-feito isso, habilitar o uso do terminal para execução de um teste na versão local (conforme scripts do package.json)
+Feito isso, habilitar o uso do terminal para execução de um teste na versão local (conforme scripts do package.json)
 
 ```bash
 npm run test:dev
 ```
 
 Ao finalizaro processo, executar os códigos no terminal ```git bash``` para executar as devidas bibliotecas no docker (final do documento)
-
-## Dependências
-- @hapi/hapi > ^19.2.0
-- @hapi/inert > ^6.0.3
-- @hapi/joi > ^17.1.1
-- @hapi/jwt > ^2.0.1
-- @hapi/vision > ^6.0.1
-- bcrypt > ^5.0.0
-- boom > ^7.3.0
-- cross-env > ^7.0.3
-- dotenv > ^8.2.0
-- hapi-auth-jwt2 > ^10.2.0
-- hapi-swagger > ^13.0.2
-- inert > ^5.1.3
-- joi > ^17.3.0
-- jsonwebtoken > ^8.5.1
-- mongoose > ^5.11.1
-- pg > ^8.5.1
-- pg-hstore > ^2.3.3
-- sequelize > ^6.3.5
-- vision > ^5.4.4
  
 ## Autor
-- [Caio Rafael](https://github.com/kaioso20).
+- [Caio Rafael Gabardo Santar (GitHub)](https://github.com/kaioso20)
+- [Caio Rafael Gabardo Santar (LinkedIn)](https://www.linkedin.com/in/caio-rafael-gabardo-6b6669163/)
 
 - Agradecimento especial ao professor [Erick Wendel](https://github.com/erickwendel).
 
 ### Site publicado (Heroku)
-- [https://sheltered-journey-34364.herokuapp.com/](https://sheltered-journey-34364.herokuapp.com/)
+- [https://sheltered-journey-34364.herokuapp.com/herois](https://sheltered-journey-34364.herokuapp.com/herois)
+> Para executar este código, necessita do token de validação (Api key)
+```Postman
+authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im92eWxxa252eGpmbG9qIiwiaWQiOjQyLCJpYXQiOjE2MDc0NTM4OTR9.yckQSKdQ80wmtmoxGgHWl4uud1HweWGovGCwNtWSs9s'
+```
 
-# Libs do docker
+# Libs do docker 
+Caso haja a necessidade de rodar uma database local, inserir os seguintes códigos abaixo no ```git bash``` para vincular uma base dados a sua escolha.
+
 ### Postgres
+```gitbash
 docker run \
     --name postgres \
     -e POSTGRES_USER=erickwendel \
@@ -71,8 +58,10 @@ docker run \
     --link postgres:postgres \
     -d \
     adminer
+```
 
 ### MongoDb
+```gitbash
 docker run \
     --name mongodb \     
     -p 27017:27017 \
@@ -91,4 +80,4 @@ docker run \
 docker exec -it mongodb \
     mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin \
     --eval "db.getSiblingDB('herois').createUser({user: 'erickwendel', pwd: 'minhasenhasecreta', roles: [{role: 'readWrite', db: 'herois'}]})"
- 
+```
