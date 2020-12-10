@@ -5,7 +5,7 @@ const heroiSchema = {
     schema: {
         id: {
             type: Sequelize.INTEGER,
-            reqrequired: true,
+            required: true,
             primaryKey: true,
             autoIncrement: true
         },
